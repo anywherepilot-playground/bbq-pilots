@@ -43,3 +43,10 @@ jobs:
     steps:
       - name: Starting engine
         run: sleep 10
+  prep_cabin:
+    name: Prepare the cabin
+    runs-on: ubuntu-latest
+    needs: [wait_rico, wait_private]
+    steps:
+      - name: Prepare the cabin
+        run: wait 10
