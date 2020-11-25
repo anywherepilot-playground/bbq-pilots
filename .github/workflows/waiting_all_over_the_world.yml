@@ -18,6 +18,7 @@ jobs:
   wait_kowalski:
     name: Wait for Kowalski
     runs-on: ubuntu-latest
+    needs: wait_rico
     steps:
       - name: Wait a bit
         run: sleep 30
@@ -26,20 +27,21 @@ jobs:
   wait_private:
    name: Wait for Private
    runs-on: ubuntu-latest
+   needs: wait_kowalski
    steps:
      - name: Wait for me
        run: sleep 20
   wait_skipper:
    name: Arrival of Skipper
    runs-on: ubuntu-latest
-   needs: [wait_rico, wait_kowalski, wait_private]
+   needs: wait_private
    steps:
      - name: Wait for me
        run: sleep 15
   start_engine:
     name: Start the engine
     runs-on: ubuntu-latest
-    needs: [wait_kowalski]
+    needs: [wait_kowalski, wait_rico, wait_private]
     steps:
       - name: Starting engine
         run: sleep 10
