@@ -29,8 +29,8 @@ jobs:
    steps:
      - name: Wait for me
        run: sleep 20
-  wait_skipper:
-   name: Wait for Skipper
+  arrival_of_skipper:
+   name: Arrival of Skipper
    runs-on: ubuntu-latest
    needs: [wait_rico, wait_kowalski, wait_private]
    steps:
@@ -39,7 +39,7 @@ jobs:
   start_engine:
     name: Start the engine
     runs-on: ubuntu-latest
-    needs: [wait_kowalski, wait_skipper]
+    needs: [wait_kowalski, arrival_of_skipper]
     steps:
       - name: Starting engine
         run: sleep 10
