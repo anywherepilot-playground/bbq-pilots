@@ -16,7 +16,7 @@ jobs:
       - name: Wait some
         run: sleep 10
   wait_kowalski:
-    name: Wait for Kowalski
+    name: Wait for Kowalski 🛠
     runs-on: ubuntu-latest
     needs: wait_rico
     steps:
@@ -25,14 +25,14 @@ jobs:
       - name: Wait some more
         run: sleep 10
   wait_private:
-   name: Wait for Private
+   name: Wait for Private 🐧
    runs-on: ubuntu-latest
    needs: wait_kowalski
    steps:
      - name: Wait for me
        run: sleep 20
   wait_skipper:
-   name: Wait for Skipper
+   name: Wait for Skipper 
    runs-on: ubuntu-latest
    needs: [wait_private, wait_rico]
    steps:
@@ -41,14 +41,7 @@ jobs:
   start_engine:
     name: Start the engine
     runs-on: ubuntu-latest
-    needs: [wait_skipper, circle_back]
+    needs: [wait_skipper]
     steps:
       - name: Starting engine
-        run: sleep 10
-  circle_back:
-    name: Let's circle back
-    runs-on: ubuntu-latest
-    needs: start_engine
-    steps:
-      - name: Circle back
         run: sleep 10
