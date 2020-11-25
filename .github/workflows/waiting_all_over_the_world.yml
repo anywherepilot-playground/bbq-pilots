@@ -32,7 +32,7 @@ jobs:
      - name: Wait for me
        run: sleep 20
   wait_skipper:
-   name: Arrival of Skipper
+   name: Wait for Skipper
    runs-on: ubuntu-latest
    needs: [wait_private, wait_rico]
    steps:
@@ -41,14 +41,14 @@ jobs:
   start_engine:
     name: Start the engine
     runs-on: ubuntu-latest
-    needs: [wait_kowalski, wait_rico, wait_private]
+    needs: [wait_skipper, circle_back]
     steps:
       - name: Starting engine
         run: sleep 10
-  prep_cabin:
-    name: Prepare the cabin
+  circle_back:
+    name: Let's circle back
     runs-on: ubuntu-latest
-    needs: [wait_skipper, wait_private]
+    needs: start_engine
     steps:
-      - name: Prepare the cabin
+      - name: Circle back
         run: sleep 10
