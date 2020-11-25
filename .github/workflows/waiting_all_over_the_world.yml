@@ -34,7 +34,7 @@ jobs:
   wait_skipper:
    name: Arrival of Skipper
    runs-on: ubuntu-latest
-   needs: wait_private
+   needs: [wait_private, wait_rico]
    steps:
      - name: Wait for me
        run: sleep 15
