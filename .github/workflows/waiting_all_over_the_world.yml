@@ -15,6 +15,10 @@ jobs:
       - uses: actions/checkout@v2
       - name: Wait some
         run: sleep 10
+      - name: More logs~
+        run: sleep 10
+      - name: More logs!
+        run: sleep 10
   wait_kowalski:
     name: Wait for Kowalski 🛠
     runs-on: ubuntu-latest
