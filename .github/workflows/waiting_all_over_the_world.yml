@@ -17,7 +17,7 @@ jobs:
         run: sleep 10
       - name: More logs~
         run: sleep 10
-      - name: More logs!
+      - name: Do, like, a lot of things. All very important.
         run: sleep 10
   wait_kowalski:
     name: Wait for Kowalski 🛠
