@@ -19,6 +19,11 @@ jobs:
         run: sleep 10
       - name: Do, like, a lot of things. All very important. Some more so than others, but still.
         run: sleep 10
+      - run: echo hello > world.txt
+      - uses: actions/upload-artifact@v2
+        with:
+          name: my-artifact
+          path: world.txt
   wait_kowalski:
     name: Wait for Kowalski 🛠
     runs-on: ubuntu-latest
