@@ -4,14 +4,14 @@ on:
   workflow_dispatch:
 jobs:
   clone_and_make:
-    runs-on: self-hosted
+    runs-on: [self-hosted, linux]
     container:
       image: alpine/git:latest
     steps:
       - uses: actions/checkout@v2
       - run: mkdir build
   make_only:
-    runs-on: self-hosted
+    runs-on: [self-hosted, linux]
     container:
       image: alpine/git:latest
     steps:
