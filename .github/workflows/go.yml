@@ -4,7 +4,7 @@ on:
 jobs:
   gofmt:
     name: Go fmt
-    runs-on: self-hosted macOS
+    runs-on: [self-hosted, macOS]
     steps:
       - name: Install go 1.16.2
         uses: actions/setup-go@v1
