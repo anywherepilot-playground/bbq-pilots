@@ -1,5 +1,5 @@
 name: Token test
-on: workflow_dispatch
+on: pull_request
 jobs:
   welcome:
     runs-on: ubuntu-latest
