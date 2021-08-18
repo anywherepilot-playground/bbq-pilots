@@ -7,7 +7,7 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-20.04
-    environment: ${{ fromJSON('{"refs/heads/main":"Production"}')[github.event.ref] || 'PublicEnvironmentForPullRequests' }}
+    environment: ${{ fromJSON('{"refs/heads/main":"Production"}')[github.event.ref] || 'OtherUnknown' }}
     steps:
       - run: sleep 20
       - run: echo ${{ SECRETS.SECRET_ONLY_AVAILABLE_IN_Production }} | wc --bytes
