@@ -1,2 +1,2 @@
 # bbq-pilots
-push push
+pull pull
