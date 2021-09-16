@@ -1,6 +1,8 @@
 name: Install Go
 on:
   workflow_dispatch:
+  push:
+    branches: [question???]
 jobs:
   gofmt:
     name: Go fmt
