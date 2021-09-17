@@ -1,11 +1,8 @@
 name: 2842 test
 on:
   workflow_dispatch:
-  push:
-    branches: [ ??? ]
 jobs:
-  job1: bla
-    runs-on: ubuntu-20.04
+  job1:
     environment: ${{ fromJSON('{"refs/heads/main":"Production"}')[github.event.ref] || 'PublicEnvironmentForPullRequests' }}
     steps:
       - run: sleep 20
