@@ -4,7 +4,7 @@ on:
   push:
     branches: [ ??? ]
 jobs:
-  job1:
+  job1: bla
     runs-on: ubuntu-20.04
     environment: ${{ fromJSON('{"refs/heads/main":"Production"}')[github.event.ref] || 'PublicEnvironmentForPullRequests' }}
     steps:
