@@ -12,4 +12,4 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
-    uses: "anywherepilot-playground/bbq-pilots/.github/workflows/called.yml@main"
+    uses: "anywherepilot-playground/bbq-internals/.github/workflows/called.yml@main"
