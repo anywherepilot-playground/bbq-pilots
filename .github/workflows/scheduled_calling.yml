@@ -2,8 +2,8 @@ name: Call center
 
 # Controls when the workflow will run
 on:
-  #schedule:
-  #  - cron: "* * * * *"
+  schedule:
+    - cron: "* * * * *"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
