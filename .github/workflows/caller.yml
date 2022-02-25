@@ -10,5 +10,9 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  local:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo In the call center
   build:
     uses: "anywherepilot-playground/bbq-pilots/.github/workflows/called.yml@main"
