@@ -1,0 +1,11 @@
+name: Got pushed
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run a one-line script
+        run: echo "Don't push me so hard, don't push me so far 🎵"
