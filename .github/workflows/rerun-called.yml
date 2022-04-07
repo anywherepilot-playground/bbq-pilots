@@ -5,5 +5,5 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - nme: Run a one-line script
+      - name: Run a one-line script
         run: echo Hello, world!
