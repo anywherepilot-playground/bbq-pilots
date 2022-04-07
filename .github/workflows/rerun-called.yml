@@ -1,6 +1,6 @@
 name: Rerun called
 on:
-  workflow_all:
+  workflow_call:
 jobs:
   job_1:
     runs-on: ubuntu-latest
