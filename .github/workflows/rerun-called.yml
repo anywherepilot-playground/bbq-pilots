@@ -19,7 +19,7 @@ jobs:
     needs: [job_1, job_2]
     steps:
       - name: Run a one-line script
-        run: exit 1
+        run: echo Hello, world!
 
   job_4:
     runs-on: ubuntu-latest
